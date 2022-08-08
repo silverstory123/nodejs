@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/public/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="center">
+        <button id="show-join">Join</button>
+    </div>
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <form action="/join" method="POST">
+            <div class="form">
+                <h2>Log in</h2>
+                <div class="form-element">
+
+                    <label for="email">ID</label>
+                    <input type="text" id="user_id" name="user_id" placeholder="Enter id">
+                </div>
+                <div class="form-element">
+                    <label for="password">Password</label>
+                    <input type="password" id="user_pw" name="user_pw" placeholder="Enter password">
+                </div>
+                <div class="form-element">
+                    <label for="Birthday">Birthday</label>
+                    <input type="text" id="user_birth" name="user_birth" placeholder="Enter Birthday yearmmdd">
+                </div>
+                <div class="form-element">
+                    <label for="Email">Email</label>
+                    <input type="text" id="user_email" name="user_email" placeholder="Enter email">
+                </div>
+                <div class="form-element">
+                    <label for="Phone">Phone</label>
+                    <input type="text" id="user_phone" name="user_phone" placeholder="exception '-'">
+                </div>
+                <button type="submit" value="가입하기" class="create_user">Join</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    //로그인창 활성화
+    document.querySelector("#show-join").addEventListener("click", function () {
+        document.querySelector(".popup").classList.add("active");
+    });
+
+    //로그인창 비활성화
+    document.querySelector(".popup .close-btn").addEventListener("click", function () {
+        document.querySelector(".popup").classList.remove("active");
+    });
+</script>

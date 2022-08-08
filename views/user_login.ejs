@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/public/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="center">
+        <button id="show-login">Login</button>
+    </div>
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <form action="/login" method="POST">
+            <div class="form">
+                <h2>Log in</h2>
+                <div class="form-element">
+
+                    <label for="email">ID</label>
+                    <input type="text" id="user_id" name="user_id" placeholder="Enter id">
+                </div>
+                <div class="form-element">
+                    <label for="password">Password</label>
+                    <input type="password" id="user_pw" name="user_pw" placeholder="Enter password">
+                </div>
+
+                <div class="form-element">
+                    <input type="checkbox" name="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <div class="form-element">
+                    <button>Do you join us?</button>
+                </div>
+                <div class="form-element">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    //로그인창 활성화
+    document.querySelector("#show-login").addEventListener("click", function () {
+        document.querySelector(".popup").classList.add("active");
+    });
+
+    //로그인창 비활성화
+    document.querySelector(".popup .close-btn").addEventListener("click", function () {
+        document.querySelector(".popup").classList.remove("active");
+    });
+</script>
